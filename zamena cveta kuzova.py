@@ -22,6 +22,7 @@ for i in range(width):
 		c = pix[i, j][2]
 		#print (a,b,c)
 		if a > 0 or b > 0 or c >0:
-		  draw.point((i, j), (t[a1]))
+		  #draw.point((i, j), (t[a1]))#random color
+		  draw.point((i, j), (255, 0, 255))
 image.save("kuzov.png", "PNG")
 del draw
