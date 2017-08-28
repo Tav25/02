@@ -8,6 +8,7 @@ from PIL import ImageDraw
 t = ((173,255,47),(255,255,47),(1,255,1),(45,55,47),(19,255,255))
 
 a1 = random.randint(0, len(t))
+print(a1)
 
 image = Image.open("kuzov.png") #Открываем изображение. 
 draw = ImageDraw.Draw(image) #Создаем инструмент для рисования. 
@@ -21,6 +22,6 @@ for i in range(width):
 		c = pix[i, j][2]
 		#print (a,b,c)
 		if a > 0 or b > 0 or c >0:
-		  draw.point((i, j), (t[1]))
+		  draw.point((i, j), (t[a1]))
 image.save("kuzov.png", "PNG")
 del draw
